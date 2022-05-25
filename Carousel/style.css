@@ -35,19 +35,27 @@
 	transform: translateY(-50%);
 }
 .carousel__button:hover {
-	opacity: 1;
+	opacity: 0.8;
 }
 .carousel__button--left {
-	left: 10px;
+	left: -55px;
 }
 .carousel__button--right {
-	right: 10px;
+	right: -55px;
 }
 .carousel__track-container {
 	background-color: rgb(218, 218, 218);
 	padding: 0px;
 	height: 100%;
 	position: relative;
+}
+.carousel__track {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	height: 100%;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
 }
 .carousel__slide {
 	cursor: pointer;
