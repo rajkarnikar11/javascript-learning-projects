@@ -8,22 +8,63 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="carouse">
-			<button class="carousel__button"></button>
+		<div class="carousel">
+			<button class="carousel__button carousel__button--left">
+				<img
+					height="70px"
+					src="./assets/left.svg"
+					alt="left arrow"
+					class="carousel__button-image"
+				/>
+			</button>
 			<div class="carousel__track-container">
 				<ul class="carousel__track">
 					<li class="carousel__slide">
-						<img src="./assets/slide1.jpg" alt="carousel image " />
+						<img
+							class="carousel__slide-image"
+							src="./assets/slide4.jpg"
+							alt="carousel image "
+						/>
 					</li>
 					<li class="carousel__slide">
-						<img src="./assets/slide2.jpg" alt="carousel image " />
+						<img
+							class="carousel__slide-image"
+							src="./assets/slide1.jpg"
+							alt="carousel image "
+						/>
 					</li>
 					<li class="carousel__slide">
-						<img src="./assets/slide3.jpg" alt="carousel image " />
+						<img
+							class="carousel__slide-image"
+							src="./assets/slide2.jpg"
+							alt="carousel image "
+						/>
+					</li>
+					<li class="carousel__slide">
+						<img
+							class="carousel__slide-image"
+							src="./assets/slide3.jpg"
+							alt="carousel image "
+						/>
 					</li>
 				</ul>
 			</div>
-			<button class="carousel__button"></button>
+			<button class="carousel__button carousel__button--right">
+				<img
+					height="70px"
+					src="./assets/right.svg"
+					alt="left arrow"
+					class="carousel__button-image"
+				/>
+			</button>
+			<div class="carousel__nav">
+				<button
+					class="carousel__indicator carousel__indicator--current-slide"
+				></button
+				><button class="carousel__indicator"></button
+				><button class="carousel__indicator"></button
+				><button class="carousel__indicator"></button>
+			</div>
 		</div>
 	</body>
 </html>
