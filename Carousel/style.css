@@ -84,5 +84,5 @@
 	opacity: 0.6;
 }
 .carousel__indicator--current-slide {
-	opacity: 0.8;
+	opacity: 0.8 !important;
 }
