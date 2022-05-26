@@ -13,7 +13,10 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 slides.forEach((slide, index) => {
 	slide.style.left = slideWidth * index + "px";
 });
-
+setInterval(function () {
+	document.querySelector(".carousel__button--right").click();
+	console.log("swiped");
+}, 4000);
 nextButton.addEventListener("click", function () {
 	const currentDot = dotsNav.querySelector(
 		".carousel__indicator--current-slide",
