@@ -19,9 +19,6 @@ nextButton.addEventListener("click", function () {
 		".carousel__indicator--current-slide",
 	);
 
-	// const currentSlide = track.querySelector(".current-slide");
-	// const nextSlide = currentSlide.nextElementSibling;
-	// const amountToMove = nextSlide.style.left;
 	currentDot.classList.remove("carousel__indicator--current-slide");
 
 	if (x < (slides.length - 1) * 100) {
@@ -38,14 +35,8 @@ nextButton.addEventListener("click", function () {
 
 	console.log(x);
 	console.log(slides.length);
-
-	// currentSlide.classList.remove("current-slide");
-	// nextSlide.classList.add("current-slide");
 });
 prevButton.addEventListener("click", function () {
-	// const currentSlide = track.querySelector(".current-slide");
-	// const nextSlide = currentSlide.nextElementSibling;
-	// const amountToMove = nextSlide.style.left;
 	const currentDot = dotsNav.querySelector(
 		".carousel__indicator--current-slide",
 	);
@@ -66,8 +57,6 @@ prevButton.addEventListener("click", function () {
 	targetDot.classList.add("carousel__indicator--current-slide");
 	console.log(x);
 	console.log(slides.length);
-	// currentSlide.classList.remove("current-slide");
-	// nextSlide.classList.add("current-slide");
 });
 dotsNav.addEventListener("click", function (e) {
 	const targetDot = e.target.closest("button");
