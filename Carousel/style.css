@@ -44,10 +44,10 @@
 	right: -55px;
 }
 .carousel__track-container {
-	background-color: rgb(218, 218, 218);
 	padding: 0px;
 	height: 100%;
 	position: relative;
+	overflow-x: hidden;
 }
 .carousel__track {
 	padding: 0;
