@@ -21,7 +21,7 @@ if (typeof myAudio.loop == "boolean") {
 	);
 }
 // myAudio.play();
-const gulpSound = new Audio("gulp.mp3");
+const gulpSound = new Audio("gulp.wav");
 const overSound = new Audio("gameover.wav");
 let speed = 7;
 let tileCount = 20;
@@ -55,19 +55,19 @@ function drawGame() {
 	if (score > 5) {
 		speed = 15;
 	}
-	if (score > 7) {
+	if (score > 10) {
 		speed = 17;
 	}
-	if (score > 10) {
+	if (score > 15) {
 		speed = 20;
 	}
-	if (score > 15) {
+	if (score > 20) {
 		speed = 22;
 	}
-	if (score > 17) {
+	if (score > 25) {
 		speed = 13;
 	}
-	if (score > 20) {
+	if (score > 30) {
 		speed = 25;
 	}
 	setTimeout(drawGame, 1000 / speed);
