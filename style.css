@@ -36,4 +36,5 @@ body {
 }
 .js__link:hover {
 	opacity: 1;
+	background-color: white;
 }
