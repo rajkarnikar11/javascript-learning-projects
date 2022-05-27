@@ -16,7 +16,7 @@
 	align-items: center;
 }
 .snake__board {
-	background-color: black;
+	/* background-color: black; */
 
 	border: 20px solid #861c2a;
 	box-shadow: 5px 5px 25px;
