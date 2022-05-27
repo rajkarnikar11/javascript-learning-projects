@@ -1,0 +1,39 @@
+* {
+	list-style: none;
+}
+body {
+	background-color: #131313;
+}
+.js__title {
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 70px;
+	text-shadow: 1.5px 3px 0px grey, 0.5px 1.5px 0px grey, 1px 2px 0px grey;
+}
+.js__link-container {
+	display: flex;
+
+	width: 70%;
+	justify-content: center;
+	margin: auto;
+	margin-top: 200px;
+}
+.js__link {
+	margin: 0 60px;
+	padding: 20px;
+	border-radius: 10px;
+	color: #131313;
+	text-decoration: none;
+	font-weight: 500;
+	font-family: "Montserrat", sans-serif;
+	transition-duration: 0.3s;
+	opacity: 0.8;
+	background-color: gray;
+	text-transform: uppercase;
+}
+.js__link:hover {
+	opacity: 1;
+}

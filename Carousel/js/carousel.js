@@ -1,6 +1,7 @@
 let x = 0;
 
 const track = document.querySelector(".carousel__track");
+const body = document.querySelector(".carousel");
 const slides = Array.from(track.children);
 const nextButton = document.querySelector(".carousel__button--right");
 const prevButton = document.querySelector(".carousel__button--left");
@@ -9,14 +10,29 @@ const currentDot = dotsNav.querySelector(".carousel__indicator--current-slide");
 const dots = Array.from(dotsNav.children);
 let targetDot = dots[0];
 const slideWidth = slides[0].getBoundingClientRect().width;
+let a = 0;
+let myInterval;
+
+// body.addEventListener("click", function () {
+// 	clearInterval(myInterval);
+// });
+body.addEventListener("mouseenter", function () {
+	clearInterval(myInterval);
+});
+
+body.addEventListener("mouseleave", function () {
+	myInterval = setInterval(function () {
+		document.querySelector(".carousel__button--right").click();
+	}, 4000);
+});
 
 slides.forEach((slide, index) => {
 	slide.style.left = slideWidth * index + "px";
 });
-setInterval(function () {
+myInterval = setInterval(function () {
 	document.querySelector(".carousel__button--right").click();
-	console.log("swiped");
 }, 4000);
+
 nextButton.addEventListener("click", function () {
 	const currentDot = dotsNav.querySelector(
 		".carousel__indicator--current-slide",
@@ -35,9 +51,6 @@ nextButton.addEventListener("click", function () {
 
 	targetDot = dots[x / 100];
 	targetDot.classList.add("carousel__indicator--current-slide");
-
-	console.log(x);
-	console.log(slides.length);
 });
 prevButton.addEventListener("click", function () {
 	const currentDot = dotsNav.querySelector(
@@ -58,8 +71,6 @@ prevButton.addEventListener("click", function () {
 
 	targetDot = dots[x / 100];
 	targetDot.classList.add("carousel__indicator--current-slide");
-	console.log(x);
-	console.log(slides.length);
 });
 dotsNav.addEventListener("click", function (e) {
 	const targetDot = e.target.closest("button");
