@@ -27,7 +27,7 @@ body {
 	border-radius: 10px;
 	color: #131313;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: bold;
 	font-family: "Montserrat", sans-serif;
 	transition-duration: 0.3s;
 	opacity: 0.8;
