@@ -1,0 +1,16 @@
+* {
+	list-style: none;
+}
+.carousel__container {
+	display: flex;
+	height: 100vw;
+}
+.carousel__image-container {
+	height: 100%;
+	width: 100%;
+}
+.carousel__image {
+	height: auto;
+	width: 90vw;
+	object-fit: cover;
+}
