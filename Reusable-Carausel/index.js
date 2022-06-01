@@ -1,17 +1,17 @@
 const carouselContainer = document.querySelector(".carousel__container");
 const carouselContainer2 = document.querySelector(".carousel__container2");
-let buttonCounter = 0;
-let dots = [];
-let sliderCount = 0;
+
 class Carousel {
 	constructor(el, imgSrc) {
-		this.createCarousel(el, imgSrc);
-
-		// let max = imgSrc.length;
+		this.el = el;
+		this.sliderCount = 0;
 		this.max = imgSrc.length;
+		let dots = [];
+		this.dots = dots;
+		this.createCarousel(el, imgSrc, dots);
 	}
 
-	createCarousel(el, imgSrc) {
+	createCarousel(el, imgSrc, dots) {
 		const track = document.createElement("ul");
 		track.classList.add("carousel__track");
 		el.appendChild(track);
@@ -29,7 +29,7 @@ class Carousel {
 			this.track = track;
 		}
 		const dotsContanier = document.createElement("ul");
-		dotsContanier.classList.add("carousel__dots-container");
+		dotsContanier.className = "carousel__dots-container";
 		el.appendChild(dotsContanier);
 
 		for (let j = 0; j < imgSrc.length; j++) {
@@ -44,7 +44,6 @@ class Carousel {
 			}
 
 			dotsContanier.appendChild(dots[j]);
-			console.log(j);
 		}
 
 		//next button
@@ -62,50 +61,64 @@ class Carousel {
 		//dot navigation
 
 		for (let j = 0; j < imgSrc.length; j++) {
-			dots[j].addEventListener("click", function (e) {
-				const currentDot = document.querySelector(
-					".carousel__dots--active",
-				);
-				console.log(e.target);
-
-				currentDot.classList.remove("carousel__dots--active");
-				// dots[j].classList.add("carousel__dots--active");
-				let targetDot = e.target;
-				targetDot.classList.add("carousel__dots--active");
-				track.style.transform = `translateX(-${j * 100}%)`;
-				sliderCount = j;
+			dots[j].addEventListener("click", (e) => {
+				this.dotnav(e, j);
 			});
 		}
 	}
+
+	dotnav(e, j) {
+		const currentDot = this.el.querySelector(".carousel__dots--active");
+
+		currentDot.classList.remove("carousel__dots--active");
+		let targetDot = e.target;
+		targetDot.classList.add("carousel__dots--active");
+		this.track.style.transform = `translateX(-${j * 100}%)`;
+		this.sliderCount = j;
+	}
+
 	next() {
-		if (sliderCount < this.max - 1) {
-			// console.log("next");
-			// console.log(this.max);
-			sliderCount++;
-			// console.log(sliderCount);
-			this.track.style.transform = `translateX(-${sliderCount * 100}%)`;
-			console.log(this.track);
+		if (this.sliderCount < this.max - 1) {
+			this.sliderCount++;
+			this.track.style.transform = `translateX(-${
+				this.sliderCount * 100
+			}%)`;
 		} else {
 			this.track.style.transform = `translateX(0%)`;
-			sliderCount = 0;
+			this.sliderCount = 0;
 		}
+		const currentDot = this.el.querySelector(".carousel__dots--active");
+		// console.log(currentDot);
+
+		currentDot.classList.remove("carousel__dots--active");
+		console.log(this.sliderCount);
+		let targetDot = this.dots[this.sliderCount];
+
+		targetDot.classList.add("carousel__dots--active");
+		console.log(targetDot);
 	}
 
 	prev() {
-		if (sliderCount != 0) {
-			// console.log("next");
-			// console.log(this.max);
-			sliderCount--;
-			// console.log(sliderCount);
-			this.track.style.transform = `translateX(-${sliderCount * 100}%)`;
-			console.log(sliderCount);
+		if (this.sliderCount != 0) {
+			this.sliderCount--;
+			this.track.style.transform = `translateX(-${
+				this.sliderCount * 100
+			}%)`;
+			console.log(this.sliderCount);
 		} else {
 			this.track.style.transform = `translateX(-${
 				(this.max - 1) * 100
 			}%)`;
-			sliderCount = this.max - 1;
-			console.log(sliderCount);
+			this.sliderCount = this.max - 1;
+			console.log(this.sliderCount);
 		}
+		const currentDot = this.el.querySelector(".carousel__dots--active");
+
+		currentDot.classList.remove("carousel__dots--active");
+		let targetDot = this.dots[this.sliderCount];
+
+		targetDot.classList.add("carousel__dots--active");
+		console.log(targetDot);
 	}
 }
 

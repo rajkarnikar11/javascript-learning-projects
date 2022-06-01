@@ -82,5 +82,5 @@ button:hover {
 	opacity: 0.7;
 }
 .carousel__dots--active {
-	opacity: 1 !important;
+	opacity: 1.1 !important;
 }
