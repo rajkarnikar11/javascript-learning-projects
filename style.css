@@ -1,5 +1,6 @@
 * {
 	list-style: none;
+	box-sizing: border-box;
 }
 body {
 	background-color: #131313;
@@ -15,24 +16,26 @@ body {
 }
 .js__link-container {
 	display: flex;
-
-	width: 80%;
-	justify-content: center;
-	margin: auto;
 	margin-top: 200px;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .js__link {
-	margin: 0 60px;
-	padding: 20px;
+	display: block;
 	border-radius: 10px;
 	color: #131313;
 	text-decoration: none;
 	font-weight: bold;
 	font-family: "Montserrat", sans-serif;
 	transition-duration: 0.3s;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0px;
+	/* padding: 10px; */
 	opacity: 0.8;
 	background-color: gray;
 	text-transform: uppercase;
+	margin-top: 50px;
 }
 .js__link:hover {
 	opacity: 1;
