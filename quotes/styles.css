@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.quotes__header {
+	text-align: center;
+}
+.quotes__container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.card__container {
+	background-color: rgb(234, 229, 229);
+	margin: 20px;
+	width: 30%;
+	min-width: 300px;
+	padding: 15px;
+	border-radius: 7px;
+	box-shadow: rgb(145, 144, 144, 0.5) 5px 5px 10px;
+	outline: 1px solid red;
+	margin: 20px auto;
+}
+.card__description {
+	font-weight: 500;
+}
+.card__author {
+	text-align: right;
+	margin-top: 20px;
+	opacity: 0.8;
+}
