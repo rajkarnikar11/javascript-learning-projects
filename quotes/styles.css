@@ -10,6 +10,7 @@ body {
 
 .quotes__header {
 	text-align: center;
+	margin-top: 50px;
 }
 .quotes__container {
 	display: flex;
@@ -23,7 +24,6 @@ body {
 	padding: 15px;
 	border-radius: 7px;
 	box-shadow: rgb(145, 144, 144, 0.5) 5px 5px 10px;
-	outline: 1px solid red;
 	margin: 20px auto;
 }
 .card__description {
@@ -33,4 +33,23 @@ body {
 	text-align: right;
 	margin-top: 20px;
 	opacity: 0.8;
+}
+.quotes__button {
+	width: 150px;
+	color: rgb(234, 229, 229);
+	cursor: pointer;
+	transition-duration: 0.3s;
+	border-radius: 10px;
+	height: 50px;
+	background-color: #171717;
+}
+.quotes__button:hover {
+	transform: translateY(-5px);
+	box-shadow: rgb(23, 23, 23, 0.3) 0 5px 8px;
+}
+.quotes__button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 100px 0;
 }
