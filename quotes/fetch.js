@@ -87,5 +87,6 @@ for (let j = 0; j < Math.ceil(dataToFetch / quotesPerPage); j++) {
 	paginationContainer.appendChild(paginationButton);
 }
 button.addEventListener("click", function (e, page = 1) {
+	button.style.display = "none";
 	navigate(e, page);
 });

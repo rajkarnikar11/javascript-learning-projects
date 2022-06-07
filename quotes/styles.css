@@ -52,7 +52,8 @@ body {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.quotes__button:hover {
+.quotes__button:hover,
+.quotes__add-button:hover {
 	transform: translateY(-5px);
 	box-shadow: rgb(23, 23, 23, 0.3) 0 5px 8px;
 }
@@ -69,13 +70,16 @@ body {
 	border-radius: 100px;
 	/* border-top: 3px solid #171717; */
 	margin: auto;
-	background: linear-gradient(
-		to bottom,
-		#171717 0 30%,
-		rgb(164, 163, 163) 30% 100%
-	);
+	border: 5px solid grey;
+	border-top: 5px solid #171717;
 	position: relative;
 	animation: rotate-loader 2s linear infinite;
+	margin: 20px;
+}
+.quotes__loader-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 @keyframes rotate-loader {
 	from {
@@ -88,18 +92,7 @@ body {
 		transform: rotate(360deg);
 	}
 }
-.quotes__loader::after {
-	content: " ";
-	background-color: white;
-	height: 22px;
-	width: 22px;
-	z-index: 2;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 100%;
-}
+
 .pagination__container {
 	height: 50px;
 	width: 80%;
@@ -127,4 +120,23 @@ body {
 .pagination__button--active {
 	background-color: #171717 !important;
 	color: white;
+}
+.quotes__add-button {
+	width: 150px;
+	color: rgb(234, 229, 229);
+	cursor: pointer;
+	transition-duration: 0.3s;
+	border-radius: 10px;
+	height: 50px;
+	background-color: #171717;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.quotes {
+	width: 100%;
+}
+.quotes__add-button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
